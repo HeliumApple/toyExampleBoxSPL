@@ -7,6 +7,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 
+import box.BoxFactory;
+import box.BoxModel;
+
+//import org.logicng;
+
+
 /**
  * 
  * This class demonstrates a toy example of an annotative product line. The
@@ -46,13 +52,31 @@ public class Example {
 	public static void main(String[] args) throws FileNotFoundException {
 
 		// Define the domain model as a bunch of boxes
-		Box domainModel = new Box("top");
+		/*Box domainModel = new Box("top");
 		Box a = new Box("a");
 		Box b = new Box("b");
 		Box c = new Box("c");
 		domainModel.addBox(a);
 		domainModel.addBox(b);
 		domainModel.addBox(c);
+		System.out.println(domainModel);*/
+		
+		BoxFactory factory = BoxFactory.eINSTANCE;
+		box.BoxModel domainModel = factory.createBoxModel();
+		//domainModel.setId("top");
+		
+		box.Box a = factory.createBox();
+		a.setId("a");
+		
+		box.Box b = factory.createBox();
+		b.setId("b");
+		
+		box.Box c = factory.createBox();
+		c.setId("c");
+		
+		domainModel.getBoxes().add(a);
+		domainModel.getBoxes().add(b);
+		domainModel.getBoxes().add(c);
 		System.out.println(domainModel);
 
 		// declare a List to store all the variable declarations
@@ -62,7 +86,7 @@ public class Example {
 		String featureModel = "";
 
 		// declare a HashMap to store the mapping between box objects and Z3 strings
-		HashMap<Box, String> featureMapping = new HashMap<>();
+		HashMap<box.Box, String> featureMapping = new HashMap<>();
 
 		// parse the CSV file that contains the annotative SPL information
 		Scanner sc = new Scanner(new File(FILENAME));
@@ -86,7 +110,7 @@ public class Example {
 				String boxName = parts[0].trim();
 				String presenceCondition = parts[1].trim();
 
-				Box box = findBox(boxName, domainModel);
+				box.Box box = findBox(boxName, domainModel);
 				if (box != null)
 					featureMapping.put(box, presenceCondition);
 			}
@@ -114,19 +138,20 @@ public class Example {
 		z3 += "(assert " + featureModel + ") \n";
 
 		// and now the presence conditions
-		for (Box x : featureMapping.keySet())
+		for (box.Box x : featureMapping.keySet())
 			z3 += "(assert " + featureMapping.get(x).toString() + ") \n";
 
 		// and finally:
 		z3 += "(check-sat) \n";
 
 		System.out.println(z3);
+		
 
 	}
 
-	private static Box findBox(String name, Box topLevelBox) {
-		List<Box> knownBoxes = topLevelBox.getBoxes();
-		for (Box b : knownBoxes)
+	private static box.Box findBox(String name, BoxModel domainModel) {
+		List<box.Box> knownBoxes = domainModel.getBoxes();
+		for (box.Box b : knownBoxes) 
 			if (b.toString().trim().equals(name))
 				return b;
 		return null;
