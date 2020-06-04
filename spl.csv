@@ -1,5 +1,5 @@
 var,f1;f2
-featureModel,(or f1 f2)
-a,(and f1 f2)
-b,(or f1 f2)
-c,(not f2) 
+featureModel,(f1 | f2)
+a,(f1 & f2)
+b,(f1 | f2)
+c,(~ f2) 

@@ -5,17 +5,23 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+//import java.util.Map;
 import java.util.Scanner;
 
 import box.BoxFactory;
 import box.BoxModel;
 
-//import org.logicng;
+//import org.logicng.formulas.FormulaFactory;
+import org.logicng.formulas.*;
+import org.logicng.io.parsers.ParserException;
+import org.logicng.io.parsers.PropositionalParser;
+import org.logicng.solvers.SATSolver;
+import org.logicng.solvers.MiniSat;
 
 
 /**
  * 
- * This class demonstrates a toy example of an annotative product line. The
+ * This class demonstrates a toy example of an annotative product line. Thep^pp
  * domain model is a "Box" model, where a top Box contains a bunch of Box
  * objects. The comma-separated-values (CSV) file spl.csv contains the feature
  * model, expressed as a propositional constraint, as well as the feature
@@ -49,7 +55,7 @@ public class Example {
 	private static final String FEATURE_MODEL_DECL_KEYWORD = "featureModel";
 	private static final String FEATURE_VAR_DELIMITER = ";";
 
-	public static void main(String[] args) throws FileNotFoundException {
+	public static void main(String[] args) throws FileNotFoundException, ParserException {
 
 		// Define the domain model as a bunch of boxes
 		/*Box domainModel = new Box("top");
@@ -61,9 +67,11 @@ public class Example {
 		domainModel.addBox(c);
 		System.out.println(domainModel);*/
 		
+		
 		BoxFactory factory = BoxFactory.eINSTANCE;
+		
+		//define the domain model
 		box.BoxModel domainModel = factory.createBoxModel();
-		//domainModel.setId("top");
 		
 		box.Box a = factory.createBox();
 		a.setId("a");
@@ -128,7 +136,7 @@ public class Example {
 		System.out.println("-------------------------");
 
 		// So let's build the z3 string!
-		String z3 = "; You can verify that this happens to be UNSAT at https://rise4fun.com/Z3 \n";
+		/*String z3 = "; You can verify that this happens to be UNSAT at https://rise4fun.com/Z3 \n";
 
 		// first the declare-fun for the boolean variables
 		for (String v : featureVariables)
@@ -143,9 +151,24 @@ public class Example {
 
 		// and finally:
 		z3 += "(check-sat) \n";
-
-		System.out.println(z3);
 		
+		System.out.println(z3);*/
+		
+		//create a new formula factory, a propositional parser and a SATSolver
+		FormulaFactory f =new FormulaFactory();
+		PropositionalParser p = new PropositionalParser(f);
+		Formula formula;
+		SATSolver miniSat;
+		
+		for (box.Box hope:featureMapping.keySet()) {
+			//parse the feature condition
+			formula = p.parse(featureMapping.get(hope).toString());
+			//solve the condition
+			miniSat = MiniSat.miniSat(f);
+			miniSat.add(formula);
+			//print if the condition and if it can be satisfied
+			System.out.println(featureMapping.get(hope).toString()+": "+miniSat.sat());
+		}
 
 	}
 
