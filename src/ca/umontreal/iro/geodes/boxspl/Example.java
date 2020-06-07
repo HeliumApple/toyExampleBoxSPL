@@ -159,16 +159,22 @@ public class Example {
 		PropositionalParser p = new PropositionalParser(f);
 		Formula formula;
 		SATSolver miniSat;
+		String z3="";
 		
-		for (box.Box hope:featureMapping.keySet()) {
+		for(box.Box aBox:featureMapping.keySet()) {
+			z3=z3+featureMapping.get(aBox).toString();
+			z3=z3+"&";
+		}
+		//remove the extra &
+		z3=z3.substring(0,z3.length()-1);
+		
 			//parse the feature condition
-			formula = p.parse(featureMapping.get(hope).toString());
+			formula = p.parse(z3);
 			//solve the condition
 			miniSat = MiniSat.miniSat(f);
 			miniSat.add(formula);
 			//print if the condition and if it can be satisfied
-			System.out.println(featureMapping.get(hope).toString()+": "+miniSat.sat());
-		}
+			System.out.println(miniSat.sat());
 
 	}
 
