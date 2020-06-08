@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_zYSS0KmvEeqIKta-yZe8NQ">
+  <imports href="box.ecore#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_4G1FkKmvEeqIKta-yZe8NQ" name="addBox">
+    <parameters xmi:id="_XoSu8Km1EeqIKta-yZe8NQ" name="boxId" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_4HArwKmvEeqIKta-yZe8NQ" name="Lhs">
+      <nodes xmi:id="_7-nPcKmvEeqIKta-yZe8NQ" name="">
+        <type href="box.ecore#//Box"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_4HArwamvEeqIKta-yZe8NQ" name="Rhs">
+      <nodes xmi:id="_7-nPcamvEeqIKta-yZe8NQ" outgoing="_JmW3gKmwEeqIKta-yZe8NQ">
+        <type href="box.ecore#//Box"/>
+      </nodes>
+      <nodes xmi:id="_H4AfUKmwEeqIKta-yZe8NQ" description="" incoming="_JmW3gKmwEeqIKta-yZe8NQ">
+        <type href="box.ecore#//Box"/>
+        <attributes xmi:id="_plX1AKm0EeqIKta-yZe8NQ" value="boxId">
+          <type href="box.ecore#//Box/Id"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_JmW3gKmwEeqIKta-yZe8NQ" source="_7-nPcamvEeqIKta-yZe8NQ" target="_H4AfUKmwEeqIKta-yZe8NQ" index="">
+        <type href="box.ecore#//Box/contents"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_7-n2gKmvEeqIKta-yZe8NQ" origin="_7-nPcKmvEeqIKta-yZe8NQ" image="_7-nPcamvEeqIKta-yZe8NQ"/>
+  </units>
+</henshin:Module>
