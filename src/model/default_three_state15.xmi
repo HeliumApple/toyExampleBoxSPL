@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ASCII"?>
+<box:BoxModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:box="box" xsi:schemaLocation="box box.ecore">
+  <boxes Id="a">
+    <contents/>
+    <contents/>
+    <contents/>
+  </boxes>
+  <boxes Id="b">
+    <contents/>
+  </boxes>
+  <boxes Id="c">
+    <contents/>
+  </boxes>
+</box:BoxModel>
