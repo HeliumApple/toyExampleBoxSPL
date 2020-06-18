@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ASCII"?>
+<box:Box xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:box="box"
+    xsi:schemaLocation="box box.ecore">
+  <contents
+      Id="42"/>
+</box:Box>

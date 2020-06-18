@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_zYSS0KmvEeqIKta-yZe8NQ" name="a">
+  <imports href="box.ecore#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_4G1FkKmvEeqIKta-yZe8NQ" name="addBox">
+    <lhs xmi:id="_4HArwKmvEeqIKta-yZe8NQ" name="Lhs">
+      <nodes xmi:id="_7-nPcKmvEeqIKta-yZe8NQ" name="">
+        <type href="box.ecore#//Box"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_4HArwamvEeqIKta-yZe8NQ" name="Rhs">
+      <nodes xmi:id="_7-nPcamvEeqIKta-yZe8NQ" outgoing="_JmW3gKmwEeqIKta-yZe8NQ">
+        <type href="box.ecore#//Box"/>
+      </nodes>
+      <nodes xmi:id="_H4AfUKmwEeqIKta-yZe8NQ" description="" incoming="_JmW3gKmwEeqIKta-yZe8NQ">
+        <type href="box.ecore#//Box"/>
+      </nodes>
+      <edges xmi:id="_JmW3gKmwEeqIKta-yZe8NQ" source="_7-nPcamvEeqIKta-yZe8NQ" target="_H4AfUKmwEeqIKta-yZe8NQ" index="">
+        <type href="box.ecore#//Box/contents"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_7-n2gKmvEeqIKta-yZe8NQ" origin="_7-nPcKmvEeqIKta-yZe8NQ" image="_7-nPcamvEeqIKta-yZe8NQ"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_4ka00KtBEeqvoZzbbwXG6A" name="rule2">
+    <lhs xmi:id="_4kiwoKtBEeqvoZzbbwXG6A" name="Lhs">
+      <nodes xmi:id="_8iyu4KtBEeqvoZzbbwXG6A" outgoing="_FfQTkKtCEeqvoZzbbwXG6A">
+        <type href="box.ecore#//Box"/>
+      </nodes>
+      <nodes xmi:id="_CdkEMKtCEeqvoZzbbwXG6A" incoming="_FfQTkKtCEeqvoZzbbwXG6A">
+        <type href="box.ecore#//Box"/>
+      </nodes>
+      <edges xmi:id="_FfQTkKtCEeqvoZzbbwXG6A" source="_8iyu4KtBEeqvoZzbbwXG6A" target="_CdkEMKtCEeqvoZzbbwXG6A">
+        <type href="box.ecore#//Box/contents"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_Hhnz8KtCEeqvoZzbbwXG6A">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_Hhnz8atCEeqvoZzbbwXG6A">
+          <conclusion xmi:id="_Hhnz8qtCEeqvoZzbbwXG6A">
+            <nodes xmi:id="_Hhnz86tCEeqvoZzbbwXG6A" outgoing="_Hhnz96tCEeqvoZzbbwXG6A">
+              <type href="box.ecore#//Box"/>
+            </nodes>
+            <nodes xmi:id="_Hhnz9atCEeqvoZzbbwXG6A" incoming="_Hhnz96tCEeqvoZzbbwXG6A" outgoing="_I8blEKtCEeqvoZzbbwXG6A">
+              <type href="box.ecore#//Box"/>
+            </nodes>
+            <nodes xmi:id="_Hhml0KtCEeqvoZzbbwXG6A" incoming="_I8blEKtCEeqvoZzbbwXG6A">
+              <type href="box.ecore#//Box"/>
+            </nodes>
+            <edges xmi:id="_Hhnz96tCEeqvoZzbbwXG6A" source="_Hhnz86tCEeqvoZzbbwXG6A" target="_Hhnz9atCEeqvoZzbbwXG6A">
+              <type href="box.ecore#//Box/contents"/>
+            </edges>
+            <edges xmi:id="_I8blEKtCEeqvoZzbbwXG6A" source="_Hhnz9atCEeqvoZzbbwXG6A" target="_Hhml0KtCEeqvoZzbbwXG6A">
+              <type href="box.ecore#//Box/contents"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_Hhnz9KtCEeqvoZzbbwXG6A" origin="_8iyu4KtBEeqvoZzbbwXG6A" image="_Hhnz86tCEeqvoZzbbwXG6A"/>
+          <mappings xmi:id="_Hhnz9qtCEeqvoZzbbwXG6A" origin="_CdkEMKtCEeqvoZzbbwXG6A" image="_Hhnz9atCEeqvoZzbbwXG6A"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_4kiwoatBEeqvoZzbbwXG6A" name="Rhs">
+      <nodes xmi:id="_8izV8KtBEeqvoZzbbwXG6A">
+        <type href="box.ecore#//Box"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_8izV8atBEeqvoZzbbwXG6A" origin="_8iyu4KtBEeqvoZzbbwXG6A" image="_8izV8KtBEeqvoZzbbwXG6A"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_YOTGMKv-Eeql5YLsX-VXAQ" name="havingFun">
+    <lhs xmi:id="_YOU7YKv-Eeql5YLsX-VXAQ" name="Lhs">
+      <nodes xmi:id="_aJZg8Kv-Eeql5YLsX-VXAQ" name="">
+        <type href="box.ecore#//Box"/>
+      </nodes>
+      <formula xsi:type="henshin:Not" xmi:id="_bEJ5Aav-Eeql5YLsX-VXAQ">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_bEJ5Aqv-Eeql5YLsX-VXAQ">
+          <conclusion xmi:id="_bEJ5A6v-Eeql5YLsX-VXAQ">
+            <nodes xmi:id="_bEJ5BKv-Eeql5YLsX-VXAQ" incoming="__PUDoKv-Eeql5YLsX-VXAQ" outgoing="_bgGOIKv-Eeql5YLsX-VXAQ">
+              <type href="box.ecore#//Box"/>
+            </nodes>
+            <nodes xmi:id="_bEJR8Kv-Eeql5YLsX-VXAQ" name="d" incoming="_bgGOIKv-Eeql5YLsX-VXAQ">
+              <type href="box.ecore#//Box"/>
+            </nodes>
+            <nodes xmi:id="_-pwfgKv-Eeql5YLsX-VXAQ" name="a" outgoing="__PUDoKv-Eeql5YLsX-VXAQ">
+              <type href="box.ecore#//Box"/>
+            </nodes>
+            <edges xmi:id="_bgGOIKv-Eeql5YLsX-VXAQ" source="_bEJ5BKv-Eeql5YLsX-VXAQ" target="_bEJR8Kv-Eeql5YLsX-VXAQ">
+              <type href="box.ecore#//Box/contents"/>
+            </edges>
+            <edges xmi:id="__PUDoKv-Eeql5YLsX-VXAQ" source="_-pwfgKv-Eeql5YLsX-VXAQ" target="_bEJ5BKv-Eeql5YLsX-VXAQ">
+              <type href="box.ecore#//Box/contents"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_bEJ5Bav-Eeql5YLsX-VXAQ" origin="_aJZg8Kv-Eeql5YLsX-VXAQ" image="_bEJ5BKv-Eeql5YLsX-VXAQ"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_YOU7Yav-Eeql5YLsX-VXAQ" name="Rhs">
+      <nodes xmi:id="_aJZg8av-Eeql5YLsX-VXAQ" outgoing="_hIhPMKv-Eeql5YLsX-VXAQ">
+        <type href="box.ecore#//Box"/>
+      </nodes>
+      <nodes xmi:id="_gBc5cKv-Eeql5YLsX-VXAQ" name="c" incoming="_hIhPMKv-Eeql5YLsX-VXAQ">
+        <type href="box.ecore#//Box"/>
+      </nodes>
+      <edges xmi:id="_hIhPMKv-Eeql5YLsX-VXAQ" source="_aJZg8av-Eeql5YLsX-VXAQ" target="_gBc5cKv-Eeql5YLsX-VXAQ">
+        <type href="box.ecore#//Box/contents"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_aJaIAKv-Eeql5YLsX-VXAQ" origin="_aJZg8Kv-Eeql5YLsX-VXAQ" image="_aJZg8av-Eeql5YLsX-VXAQ"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_mRiFgKwAEeql5YLsX-VXAQ" name="havingMoreFun">
+    <lhs xmi:id="_mRiFgawAEeql5YLsX-VXAQ" name="Lhs">
+      <nodes xmi:id="_mRiFgqwAEeql5YLsX-VXAQ" name="">
+        <type href="box.ecore#//Box"/>
+      </nodes>
+      <formula xsi:type="henshin:Not" xmi:id="_mRiFg6wAEeql5YLsX-VXAQ">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_mRiFhKwAEeql5YLsX-VXAQ">
+          <conclusion xmi:id="_mRiFhawAEeql5YLsX-VXAQ">
+            <nodes xmi:id="_mRiFhqwAEeql5YLsX-VXAQ" incoming="_mRiFiqwAEeql5YLsX-VXAQ">
+              <type href="box.ecore#//Box"/>
+            </nodes>
+            <nodes xmi:id="_mRiFiKwAEeql5YLsX-VXAQ" name="a" outgoing="_mRiFiqwAEeql5YLsX-VXAQ">
+              <type href="box.ecore#//Box"/>
+            </nodes>
+            <edges xmi:id="_mRiFiqwAEeql5YLsX-VXAQ" source="_mRiFiKwAEeql5YLsX-VXAQ" target="_mRiFhqwAEeql5YLsX-VXAQ">
+              <type href="box.ecore#//Box/contents"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_mRiFi6wAEeql5YLsX-VXAQ" origin="_mRiFgqwAEeql5YLsX-VXAQ" image="_mRiFhqwAEeql5YLsX-VXAQ"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_mRiFjKwAEeql5YLsX-VXAQ" name="Rhs">
+      <nodes xmi:id="_mRiFjawAEeql5YLsX-VXAQ" outgoing="_mRiFj6wAEeql5YLsX-VXAQ">
+        <type href="box.ecore#//Box"/>
+      </nodes>
+      <nodes xmi:id="_mRiFjqwAEeql5YLsX-VXAQ" name="c" incoming="_mRiFj6wAEeql5YLsX-VXAQ">
+        <type href="box.ecore#//Box"/>
+      </nodes>
+      <edges xmi:id="_mRiFj6wAEeql5YLsX-VXAQ" source="_mRiFjawAEeql5YLsX-VXAQ" target="_mRiFjqwAEeql5YLsX-VXAQ">
+        <type href="box.ecore#//Box/contents"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_mRiFkKwAEeql5YLsX-VXAQ" origin="_mRiFgqwAEeql5YLsX-VXAQ" image="_mRiFjawAEeql5YLsX-VXAQ"/>
+  </units>
+</henshin:Module>
